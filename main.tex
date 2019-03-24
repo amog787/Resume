@@ -1,0 +1,184 @@
+\documentclass[10pt,a4paper]{article}	
+\usepackage[utf8]{inputenc}		
+\usepackage{xifthen}
+\usepackage[default]{raleway}
+\usepackage{hyperref}
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
+\usepackage{moresize}		
+\usepackage[a4paper]{geometry}		
+\geometry{top=1.75cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\usepackage{fancyhdr}		
+\pagestyle{fancy}
+\setlength{\headheight}{-5pt}		
+\lhead{}
+\chead{\small{
+  Amogha Maiya $\cdot$ 
+  Bangalore, India $\cdot$ 
+  \textcolor{sectcol}{\textbf{\href
+  {mailto:amoghmaiya@gmail.com}
+  {amoghmaiya@gmail.com}}} $\cdot$
+  +91 9482706930
+}}
+\rhead{}
+\setlength{\parindent}{0mm}
+\usepackage{multicol}			
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tikz}				
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+\usepackage{color}
+
+\definecolor{sectcol}{RGB}{90,90,120}
+
+\definecolor{bgcol}{RGB}{110,110,110}
+
+\definecolor{softcol}{RGB}{225,225,225}
+
+\renewcommand{\headrulewidth}{0pt} 
+
+\renewcommand{\footrulewidth}{0pt}	  	
+
+\renewcommand{\thepage}{}	
+
+\renewcommand{\thesection}{}			
+
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+
+\newcommand{\larrow}[1]{
+  \begin{tikzpicture}[scale=0.58]
+    \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
+  \end{tikzpicture}
+}
+
+\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
+
+\newcommand{\rarrow}{
+  \begin{tikzpicture}[scale=0.7]
+    \filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
+  \end{tikzpicture}
+}
+
+\newcommand{\cvsection}[1]{
+  \vspace{10pt}
+  \colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
+    \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} 
+    \larrow{bgcol}\textcolor{white}{\textbf{#1}}\hspace{4pt}
+  }}\\
+}
+
+\newcommand{\metasection}[2]{
+  \begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
+    \larrow{bgcol} \normalsize{\textcolor{sectcol}{#1}}&#2\\[10pt]
+  \end{tabular*}
+}
+
+
+\newcommand{\cvevent}[3]{
+  \begin{tabular*}{1\textwidth}{p{2.5cm} p{10.5cm} x {4.0cm}}
+    \textcolor{bgcol}{#1} & \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+  \end{tabular*}
+  \vspace{-10pt}
+  \textcolor{softcol}{\hrule}
+  \vspace{10pt}
+}
+
+\newcommand{\cvdetail}[1]{
+  \begin{tabular*}{1\textwidth}{p{2.5cm} p{14.5cm}}
+    & \larrow{bgcol}  #1\\ [3pt]
+  \end{tabular*}
+}
+
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+\title{resume}
+\begin{document}
+
+\pagestyle{fancy}	
+
+
+\vspace{-20pt}
+
+\hspace{-0.25\linewidth}\colorbox{bgcol}{
+  \makebox[1.5\linewidth][c]{
+    \HUGE{\textcolor{white}{\textsc{Amogha Maiya}}} 
+    \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} 
+    \HUGE{\textcolor{white}{\textsc{Resume}}}
+  }
+}
+
+
+\begin{figure}[H]
+\begin{flushright}
+  \includegraphics[width=0.2\linewidth]{jss.png}
+\end{flushright}
+\end{figure}
+
+
+\vspace{-115pt}
+
+\metasection{Status:}{Studying B.Tech in Electronics and Instrumentation Engineering}
+\metasection{Skills:}{C, C++, Dart, HTML, git, JavaScript, Bash} 
+\metasection{Interests:}{IOT, Embedded Systems, Web Design, Android Development, Linux/Kernel}
+\metasection{Activities:}{Table Tennis, Football, Music, DIY's, Porting}
+
+
+\cvsection{Summary}
+
+Self-motivated student with vast IT experience. Skills include object oriented programming, creative problem solving, web design, reverse engineering. Tenacious Quest for Success + Learning, Results-Driven Leadership, Challenger of Conventional Wisdom 
+
+\cvsection{Projects and Achievements}
+
+\cvevent{}{Texas Instruments}{}
+\cvdetail{Participated in numerous online tests}
+\cvdetail{Won First place in DSP, MSP430, Analog SP, Workbench}
+\cvdetail{Certificates: (\href{https://goo.gl/X74CyE}{https://goo.gl/X74CyE})}
+
+\cvevent{}{Android Development}{}
+\cvdetail{Android Custom ROM and App Development}
+\cvdetail{Modifying Android Source code to suit my needs and building optimized apps}
+\cvdetail{Porting Software features and OS}
+\cvdetail{Tinkering with Linux Kernel for android to squeeze more performance and Battery}
+\cvdetail{XDA Profile: (\href{https://forum.xda-developers.com/member.php?u=8950490}{https://forum.xda-developers.com/member.php?u=8950490})}
+
+\cvevent{}{Electronics Projects}{}
+\cvdetail{Arduino mini projects on:}
+\cvdetail{WLI, Sun tracing, Radar, Obstacle detection and Avoidance}
+\cvdetail{Remote Control using BT and WiFi modules}
+\cvdetail{Alarms and Semi-Automation}
+\cvdetail{ESP8266 Google Assistant control}
+
+\cvsection{Education}
+
+\cvevent{2016 - Present}{Bachelor's Degree, Electronics and Instrumentation}{VTU}
+\cvdetail{College: JSS Academy of Technical Education}
+\cvdetail{Grade: 8.2 CGPA (aggregate upto and including 5th semester)}
+
+\cvevent{2014 - 2016}{PUC, Science}{Karnataka State Board}
+\cvdetail{College: KLE's Independent PU College}
+\cvdetail{Grade: 86 Percent}
+
+\cvevent{2014}{Class 10}{CBSE}
+\cvdetail{School: The Smart School}
+\cvdetail{Grade: 9.4 CGPA }
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{
+  \makebox[1.5\linewidth][c]{
+    \mystrut \small 
+    \textcolor{white}{
+      \href{https://www.linkedin.com/in/amogha-maiya-28768b177}
+      {https://www.linkedin.com/in/amogha-maiya-28768b177}
+    } $\cdot$ 
+    \textcolor{white}{
+      \href{https://github.com/amog787}
+      {https://github.com/amog787}
+    }
+  }
+}
+\end{document}
